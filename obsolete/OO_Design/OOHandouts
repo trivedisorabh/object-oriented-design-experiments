@@ -1,0 +1,59 @@
+Lesson 1 :-
+
+Association types :-
+
+	- Dependency association 
+	- Composition association (has ownership)
+	- Aggregation association (similar to composition, but no ownership
+		
+		Eg:-
+		
+		School Language Department <Composite>------> Spanish Course <Aggregate>-------> Student
+		
+		If, there is no school language department, than all the courses means nothing.
+		But, in case of Student object, it can exist independently even though, the student is not 
+		enrolled in "Spanish course".
+		
+		
+		So, school department owns many courses but a course doesn't (Not mandatory) owns a student.
+		
+
+Lesson 2 :-
+
+Forming association between object
+
+	- In UML diagram, arrow's direction refers to the object, to which we need to send a message to.
+	
+	- Learn, how to organize your association according application behavior.
+	
+	
+Lesson 3 :-
+
+Overview of Software Design
+
+	- Initial design should be made, by keeping in mind that future enhancement can pitch in.
+	- Develop Iteratively.
+	- Keep things some in initial stages.
+	- Class names sohould be nouns based on their intent (It should be singular).
+	- for multiple value, we use containers.
+	
+
+Lesson 4 :-
+
+Single Responsibility Principle. (SRP)
+
+	- Check the responsibility.
+	- A class with too much responsibility, is a fragile design.
+	- A class should only know one thing.
+	- Keeping application DRY (Don't Repeat Yourself) having strict SRP.
+
+	
+Lesson 5 :-
+
+Open close principle
+
+	- Classes should be open for extension and closed for modification
+	- Whenever you encounter instanceof, check object responsibility and behavior.
+	- Strategy Pattern, we encapsulatedt the type of work
+	
+	
