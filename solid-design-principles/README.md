@@ -23,8 +23,20 @@ Ideally when are class is deviating from "primary" responsibility. We should thi
 - So, keep this in mind when designing a class which could have a modify request in future. 
 - Keep the variable business logic separate from fixed logic. In this way you don't need to change the code.
 
-#LSP (Liskov Substitution Principle)
+# LSP (Liskov Substitution Principle)
 - Idea is to substitute sub class for a base class 
 - So, if you have an API which takes a base class reference. It should be totally safe to pass sub class. (Without the things breaking)
 - Can be achieved by Factory design pattern
     - Idea is to hide the construction logic of base and sub class.
+
+# ISP (Interface Segregation Principle)
+- Idea is to split interface to smaller interfaces
+- You should not put something in your interface that is more than what client is expecting.
+- Violation is forcing the API implementer to implement things that they don't support. User becomes puzzled if he/she is not sure about the api provided.
+
+## YAGNI (You Ain't Going to Need It)
+- This principle supports the idea behind ISP
+- If your class does not need to support an extra feature. Then don't do it. Because you ain't gonna need it. 😉
+- Use Decorator Pattern to delegate responsibility to implemented interfaces.
+
+So, Instead of sticking everything into single Class. Make it minimum possible. So, that end user at some point does not face a dilemma of implementing work around of the things they cant support.    
