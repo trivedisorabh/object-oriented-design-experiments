@@ -23,3 +23,8 @@ Ideally when are class is deviating from "primary" responsibility. We should thi
 - So, keep this in mind when designing a class which could have a modify request in future. 
 - Keep the variable business logic separate from fixed logic. In this way you don't need to change the code.
 
+#LSP (Liskov Substitution Principle)
+- Idea is to substitute sub class for a base class 
+- So, if you have an API which takes a base class reference. It should be totally safe to pass sub class. (Without the things breaking)
+- Can be achieved by Factory design pattern
+    - Idea is to hide the construction logic of base and sub class.
