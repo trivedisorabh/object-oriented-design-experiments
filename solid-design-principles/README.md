@@ -9,3 +9,17 @@ than what is required. The responsibility can be delegated to some other object.
 - So, if we try to add functions like saveToAFile, loadFromAFile, loadFromAUrl. Then we are just introducing new concerns. 
 Ideally when are class is deviating from "primary" responsibility. We should think about separation of concern.
 
+# OCP (Open Close Principle)
+- Idea is not jump into the code which you have already written. Foreg
+    - Filtering of products, Idea is to filter.  
+    - There could be endless combination of filter techniques depending on the product attributes. 
+    - So, why not give this filtering logic to the caller. The filtering logic is independent of the criteria that user wants.	 
+- It should be Open for extension, but close for modification. 
+- So, modification of code that has already been written and tested is not great.
+- It is ok to have separate logic which is closely defined to your model. But if the logic is influenced by lots of input. Then it is time to generalize the logic 
+- Idea is not to jump in the code which is written
+- It can be solved using specification principle
+- You are free to extend or implement it but close to modify the existing code.
+- So, keep this in mind when designing a class which could have a modify request in future. 
+- Keep the variable business logic separate from fixed logic. In this way you don't need to change the code.
+
