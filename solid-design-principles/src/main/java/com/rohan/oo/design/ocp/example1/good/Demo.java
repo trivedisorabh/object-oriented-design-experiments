@@ -3,6 +3,7 @@ package com.rohan.oo.design.ocp.example1.good;
 import com.rohan.oo.design.ocp.example1.Color;
 import com.rohan.oo.design.ocp.example1.Size;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class Demo {
@@ -11,8 +12,7 @@ public class Demo {
         Product tree = new Product("Tree", Color.GREEN, Size.LARGE);
         Product house = new Product("House", Color.BLUE, Size.LARGE);
 
-        List<Product> products = List.of(apple, tree, house);
-
+        List<Product> products = Arrays.asList(apple, tree, house);
         BetterFilter betterFilter = new BetterFilter();
         System.out.println("Green products: ");
         betterFilter.filter(products, new ColorSpecification(Color.GREEN)).forEach(product ->
